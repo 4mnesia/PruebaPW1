@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tu tienda online</title>
+    <title>descuento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">PcBuilderGod</a>
+            <a class="navbar-brand" href="#">
+                <img src="ruta/al/logo.png" alt="Logo" style="max-height: 40px;"> PcBuilderGod
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,18 +28,48 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:3000/html/contacto.html">Contacto</a>
+                    </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:3000/html/carrito.html">Carrito</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/html/carrito.html">Carrito</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="container mt-5">
+        <h2>Productos en descuentos</h2>
+        <div class="row" id="productosMasVistos"></div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    
+    <script>
+        var productosMasVistos = [
+            { nombre: "Producto 1", precio: "$100", imagen: "url_de_la_imagen_1.jpg", descuento: "10%" },
+            { nombre: "Producto 2", precio: "$150", imagen: "url_de_la_imagen_2.jpg", descuento: "15%" },
+            { nombre: "Producto 3", precio: "$200", imagen: "url_de_la_imagen_3.jpg", descuento: "20%" }
+        ];
+
+
+        var productosMasVistosHtml = "";
+        productosMasVistos.forEach(function(producto) {
+            productosMasVistosHtml += `<div class="col-md-4">
+                <div class="card mb-3">
+                    <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+                    <div class="card-body">
+                        <h5 class="card-title">${producto.nombre}</h5>
+                        <p class="card-text">Precio: ${producto.precio}</p>`;
+            if (producto.descuento) {
+                productosMasVistosHtml += <p class="card-text">Descuento: ${producto.descuento}</p>;
+            }
+            productosMasVistosHtml += `</div>
+                </div>
+            </div>`;
+        });
+        document.getElementById("productosMasVistos").innerHTML = productosMasVistosHtml;
+    </script>
 </body>
 </html>
