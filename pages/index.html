@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Tu tienda online</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">PcBuilderGod</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:3000/pages/index.html">
+                <img src="/image/icon1.png" alt="Logo" style="max-height: 45px;"> PcBuilderGod
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
+
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/index.html">Inicio</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/Producto.html">Productos</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/Producto.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/descuento.html">Ofertas especiales</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/descuento.html">Ofertas especiales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/contacto.html">Contacto</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/contacto.html">Contacto</a>
+                    </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:3000/html/carrito.html">Carrito</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/lomasvisto.html">Lo mas visto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:3001/pages/carrito.html">Carrito</a>
                     </li>
                 </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
             </div>
         </div>
     </nav>
@@ -39,13 +54,13 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/image/100162541.jpeg" class="d-block w-90 mx-auto" alt="...">
+                <img src="/image/100162541.jpeg" class="d-block w-100 mx-auto" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/image/pantalla.jpg" class="d-block w-90 mx-auto" alt="...">
+                <img src="/image/pantalla.jpg" class="d-block w-100 mx-auto" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/image/" class="d-block w-90 mx-auto" alt="...">
+                <img src="/image/pmddddd.png" class="d-block w-100 mx-auto" alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -98,4 +113,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

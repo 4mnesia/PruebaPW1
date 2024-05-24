@@ -7,11 +7,6 @@
     <title>Productos en promoción</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-<<<<<<< HEAD
-
-=======
-        /* Estilos personalizados */
->>>>>>> 367a003a2770bfb4a04cece48a5e8fe4e4dd9224
         .producto {
             margin-bottom: 20px;
             text-align: center;
@@ -31,8 +26,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="ruta/al/logo.png" alt="Logo" style="max-height: 40px;"> PcBuilderGod
+            <a class="navbar-brand" href="http://127.0.0.1:3000/html/index.html">
+                <img src="/image/icon1.png" alt="Logo" style="max-height: 40px;"> PcBuilderGod
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,31 +46,36 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:3000/html/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:3000/html/lomasvisto.html">Lo mas visto</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:3000/html/carrito.html">Carrito</a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="producto">
-                    <img src="ruta_de_la_imagen_1.jpg" alt="Producto 1">
-                    <p>Precio: $100</p>
-                </div>
+        <div class="col-md-4">
+            <div class="producto">
+                <img src="/image/cl-odyssey-g3-g32a-422024-ls24ag320nlxzs-532138007.avif" alt="Producto 1">
+                <p>Precio: $100</p>
+                <button class="btn btn-primary btn-sm agregar-carrito" data-nombre="Monitor" data-precio="100">Agregar al carrito</button>
             </div>
+        </div>
             <div class="col-md-4">
                 <div class="producto">
-                    <img src="ruta_de_la_imagen_2.jpg" alt="Producto 2">
+                    <img src="/image/amdxddefwwefwerf.jpg" alt="Producto 2">
                     <p>Precio: $150</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="producto">
-                    <img src="ruta_de_la_imagen_3.jpg" alt="Producto 3">
+                    <img src="/image/596745_picture_1490303275.png" alt="Producto 3">
                     <p>Precio: $200</p>
                 </div>
             </div>
@@ -83,29 +83,43 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="producto">
-                    <img src="ruta_de_la_imagen_4.jpg" alt="Producto 4">
+                    <img src="/image/3060.png" alt="Producto 4">
                     <p>Precio: $120</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="producto">
-                    <img src="ruta_de_la_imagen_5.jpg" alt="Producto 5">
+                    <img src="/image/1892827_picture_1709951044.jpg" alt="Producto 5">
                     <p>Precio: $180</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="producto">
-                    <img src="ruta_de_la_imagen_6.jpg" alt="Producto 6">
+                    <img src="/image/1580673_picture_1651582928.jpg" alt="Producto 6">
                     <p>Precio: $220</p>
                 </div>
             </div>
         </div>
     </div>
+    
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botonesAgregarCarrito = document.querySelectorAll('.agregar-carrito');
+            botonesAgregarCarrito.forEach(boton => {
+                boton.addEventListener('click', function () {
+                    const nombre = boton.dataset.nombre;
+                    const precio = parseFloat(boton.dataset.precio);
+                    agregarProducto(nombre, precio, 1); 
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

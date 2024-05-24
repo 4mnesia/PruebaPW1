@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>descuento</title>
+    <title>Descuento</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="ruta/al/logo.png" alt="Logo" style="max-height: 40px;"> PcBuilderGod
+            <a class="navbar-brand" href="http://127.0.0.1:3000/pages/index.html">
+                <img src="/image/icon1.png" alt="Logo" style="max-height: 40px;"> PcBuilderGod
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,20 +18,24 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/index.html">Inicio</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/Producto.html">Productos</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/Producto.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/descuento.html">Ofertas especiales</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/descuento.html">Ofertas especiales</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/contacto.html">Contacto</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:3000/html/carrito.html">Carrito</a>
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/lomasvisto.html">Lo mas visto</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:3000/pages/carrito.html">Carrito</a>
+                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -48,11 +52,10 @@
 
     <script>
         var productosMasVistos = [
-            { nombre: "Producto 1", precio: "$100", imagen: "url_de_la_imagen_1.jpg", descuento: "10%" },
-            { nombre: "Producto 2", precio: "$150", imagen: "url_de_la_imagen_2.jpg", descuento: "15%" },
-            { nombre: "Producto 3", precio: "$200", imagen: "url_de_la_imagen_3.jpg", descuento: "20%" }
+            { nombre: "HP Victus 16-D0511LA [62C27LA]", precio: "$550.990", imagen: "https://media.solotodo.com/media/products/1568930_picture_1650357961.jpg", descuento: "10%" },
+            { nombre: "Redragon Kumara K552 Rainbow (Español) (Blanco - Switch Red)", precio: "$29.990", imagen: "https://media.solotodo.com/media/products/1772154_picture_1687186718.jpg", descuento: "15%" },
+            { nombre: "MSI MPG A1000G PCIE5 (1000 W)", precio: "$149.990", imagen: "https://media.solotodo.com/media/products/1789464_picture_1690609414.jpg", descuento: "20%" }
         ];
-
 
         var productosMasVistosHtml = "";
         productosMasVistos.forEach(function(producto) {
@@ -63,7 +66,7 @@
                         <h5 class="card-title">${producto.nombre}</h5>
                         <p class="card-text">Precio: ${producto.precio}</p>`;
             if (producto.descuento) {
-                productosMasVistosHtml += <p class="card-text">Descuento: ${producto.descuento}</p>;
+                productosMasVistosHtml += `<p class="card-text">Descuento: ${producto.descuento}</p>`;
             }
             productosMasVistosHtml += `</div>
                 </div>
